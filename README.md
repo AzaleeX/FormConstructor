@@ -5,24 +5,12 @@
 [![Jitpack](https://jitpack.io/v/MEFRREEX/FormConstructor.svg)](https://jitpack.io/#MEFRREEX/FormConstructor)
 [![CloudBurst](https://img.shields.io/badge/CloudBurst-2.0.1-brightgreen)](https://cloudburstmc.org/resources/formconstructor-v2.957)
 
-> [!IMPORTANT]
-> The current version of FormConstructor plugin is 2.0.0, if your plugin does not support this version you can download FormConstructor version 1.1.4 from the link below:         
-> [Download FormConstructor 1.1.4](https://github.com/MEFRREEX/FormConstructor/tree/1.1.4)
+> [!CAUTION]
+> This edition of **FormConstructor** is specifically designed for **PowerNukkitX 2.0**. I will continue to update it until the official release of **PNX 2.0**, including all the new features mentioned in the Discord server. Once PNX 2.0 is actually launched with all the announced features, I plan to cease development and maintenance of this project.
+>
+>  [Discord PowerNukkitX](https://discord.gg/u5nJ8B5YSM)
 
 Full list of changes: [CHANGELOG](CHANGELOG.md)
-
-🤔 Introduction
-------------- 
-
-Library is designed to simplify the creation and handling of forms.
-It has a few key advantages over other  form libraries:
-
-- Forms are processed using a lambda, which is passed when the form itself is created, and not by catching events.
-- For each button in SimpleForm we can set a lambda function.
-- In SimpleForm we get a button object as a response, where we can get its name and index.
-- In CustomForm we can mark elements with an identifier to conveniently get this element in its handler. We can get element by id and its index.
-- For each form we can set its closing handler.
-- Easy async handling.
 
 🛠 Examples
 -------------
@@ -163,10 +151,10 @@ public void onFormSend(PlayerFormSendEvent event) {
 #### Dependency
 ```xml
 <dependency>
-    <groupId>com.github.MEFRREEX</groupId>
-    <artifactId>FormConstructor</artifactId>
-    <version>2.0.1</version>
-</dependency>
+	    <groupId>com.github.AzaleeX</groupId>
+	    <artifactId>FormConstructor</artifactId>
+	    <version>0.0.1</version>
+	</dependency>
 ```
 
 💰 Donate
