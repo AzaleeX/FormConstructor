@@ -2,6 +2,9 @@ name: Manual Release
 
 on:
   workflow_dispatch:
+  push:
+    tags:
+      - '*'
 
 jobs:
   create-release:
@@ -10,6 +13,10 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
+        
+      - name: Get Git Tag
+        id: git_tag
+        run: echo "::set-output name=TAG::$(git describe --tags)"
 
       - name: Set up JDK
         uses: actions/setup-java@v2
@@ -25,5 +32,5 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           files: target/*.jar
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          tag_name: ${{ steps.git_tag.outputs.TAG }}
+          token: ${{ secrets.GITHUB_TOKEN }}
